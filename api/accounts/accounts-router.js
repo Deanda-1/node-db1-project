@@ -4,7 +4,7 @@ const router = require('express').Router()
 router.get('/', (req, res, next) => {
   // DO YOUR MAGIC
   try {
-    res.json('get account by id')
+    res.json('get accounts')
   } catch (err) {
     next(err)
   }
@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 router.get('/:id', (req, res, next) => {
   // DO YOUR MAGIC
   try {
-    res.json('post account')
+    res.json('get account by id')
   } catch (err) {
     next(err)
   }
@@ -22,7 +22,7 @@ router.get('/:id', (req, res, next) => {
 router.post('/', (req, res, next) => {
   // DO YOUR MAGIC
   try {
-    res.json('update account')
+    res.json('post account')
   } catch (err) {
     next(err)
   }
@@ -31,7 +31,7 @@ router.post('/', (req, res, next) => {
 router.put('/:id', (req, res, next) => {
   // DO YOUR MAGIC
   try {
-    res.json('delete account')
+    res.json('update account')
   } catch (err) {
     next(err)
   }
@@ -40,7 +40,7 @@ router.put('/:id', (req, res, next) => {
 router.delete('/:id', (req, res, next) => {
   // DO YOUR MAGIC
   try {
-    res.json('get accounts')
+    res.json('delete account')
   } catch (err) {
     next(err)
   }
