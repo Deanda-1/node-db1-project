@@ -1,25 +1,29 @@
-/* eslint-disable no-unused-vars */
 const db = require('../../data/db-config')
 
 const getAll = () => {
+  // select * from accounts;
   return db('accounts');
 }
 
 const getById = id => {
+  // select * from accounts where id = 1;
   return db('accounts').where('id', id).first()
 }
 
 const create = async account => {
-  const [id] = await db('acccounts').insert(account)
+  // insert into accounts (name, budget) values ('foo', 1000);
+  const [id] = await db('accounts').insert(account)
   return getById(id)
 }
 
 const updateById = async (id, account) => {
-  await db('account').where('id', id).update(account)
-  return getById(id)  
+  // update accounts set name='foo', budget=1000 where id= 1;
+    await db('accounts').where('id', id).update(account)
+    return getById(id)
 }
 
 const deleteById = id => {
+  // delete from accounts where id = 1;
   return db('accounts').where('id', id).del()
 }
 
